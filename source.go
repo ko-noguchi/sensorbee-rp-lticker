@@ -11,15 +11,13 @@ import (
 )
 
 type psutilIntervalSource struct {
-	ctx *core.Context
-	w   core.Writer
-
+	ctx      *core.Context
+	w        core.Writer
 	interval time.Duration
 }
 
 func (s *psutilIntervalSource) GenerateStream(ctx *core.Context, w core.Writer) error {
-	var cnt int64
-	for ; ; cnt++ {
+	for {
 		v, _ := mem.VirtualMemory()
 
 		virtualMemory := data.Map{
