@@ -2,9 +2,9 @@ package plugin
 
 import (
 	"gopkg.in/sensorbee/sensorbee.v0/bql"
-	"github.com/ktanaka89/sensorbee-plugin-psutil"
+	"github.com/ko-noguchi/sensorbee-rp-lticker"
 )
 
 func init() {
-	bql.MustRegisterGlobalSourceCreator("psutil", bql.SourceCreatorFunc(sensorbee_plugin_psutil.NewIntervalSource))
+	bql.MustRegisterGlobalSourceCreator("rp-lticker", bql.SourceCreatorFunc(sensorbee_rp_lticker.NewIntervalSource))
 }
